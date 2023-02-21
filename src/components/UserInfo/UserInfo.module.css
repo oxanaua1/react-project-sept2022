@@ -1,0 +1,11 @@
+.UserInfo{
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #d40443;
+    color: #fff;
+}
