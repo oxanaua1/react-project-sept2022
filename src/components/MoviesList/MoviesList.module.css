@@ -1,0 +1,22 @@
+.MovieListWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 10px;
+    background-color: aliceblue;
+}
+
+
+.Page button {
+    border: 1px solid azure;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: aliceblue;
+    color: cyan;
+    font-weight: bold;
+    border-radius: 10px;
+    background-image: linear-gradient(144deg, #18467b, #5B42F3 50%, #6a65e2);
+
+}

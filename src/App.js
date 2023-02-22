@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, Routes} from "react-router-dom";
 
 import {MoviesPage} from "./containers";
-import {GenreBadge, MovieInfo, MoviesList} from "./components";
+import {GenreBadge, MovieInfo, MoviesByGenresList, MoviesList} from "./components";
 
 const App = () => {
     return (
@@ -11,7 +11,9 @@ const App = () => {
                 <Route path={'/'} element={<MoviesPage/>}>
                     <Route path={'movies'} element={<MoviesList/>}/>
                     <Route path={'movies/:id'} element={<MovieInfo/>}/>
+
                     <Route path={'genres'} element={<GenreBadge/>}/>
+                    <Route path={'genres/:id'} element={<MoviesByGenresList/>}/>
 
 
                 </Route>
