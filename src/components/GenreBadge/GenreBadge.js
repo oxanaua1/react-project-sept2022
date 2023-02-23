@@ -18,12 +18,17 @@ const GenreBadge = () => {
 
 
     return (
-        <div className={css.GenreContainer}>
+        <div>
+            <div className={css.GenreContainer}>
 
-            <div className={css.GenreWrap}>{genres.map(genre =>
-                <Link to={genre.id.toString()}
-                      key={genre.id}>{genre.name}
-                </Link>)}</div>
+
+                <div className={css.GenreWrap}>{genres.map(genre =>
+
+                    <Link to={genre.id.toString()}
+                          key={genre.id}>{genre.name}
+                    </Link>)}</div>
+            </div>
+
 
         </div>
     );

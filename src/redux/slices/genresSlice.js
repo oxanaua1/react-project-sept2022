@@ -22,18 +22,18 @@ const getAll = createAsyncThunk(
     }
 );
 
-const getById = createAsyncThunk(
-    'genresSlice/getById',
-    async (id, thunkAPI) => {
-        try {
-          return await genresService.getById(id);
-
-
-        } catch (e) {
-            return thunkAPI.rejectWithValue(e.response.data)
-        }
-    }
-)
+// const getById = createAsyncThunk(
+//     'genresSlice/getById',
+//     async (id, thunkAPI) => {
+//         try {
+//           return await genresService.getById(id);
+//
+//
+//         } catch (e) {
+//             return thunkAPI.rejectWithValue(e.response.data)
+//         }
+//     }
+// )
 
 const genresSlice = createSlice({
     name: 'genresSlice',
@@ -45,9 +45,9 @@ const genresSlice = createSlice({
                 state.genres = action.payload;
                 state.loading = false;
             })
-            .addCase(getById.fulfilled, (state, action) => {
-                state.genre = action.payload;
-            })
+            // .addCase(getById.fulfilled, (state, action) => {
+            //     state.genre = action.payload;
+            // })
 
 });
 
@@ -55,7 +55,7 @@ const {reducer: genresReducer} = genresSlice;
 
 const genresActions = {
     getAll,
-    getById
+    // getById
 }
 
 

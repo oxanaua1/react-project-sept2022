@@ -4,7 +4,7 @@ import {urls} from "../configs";
 const moviesService = {
     getAll: (page) => apiService.get(`${urls.movies}?api_key=${apiKey}&page=${page}`).then(value => value.data.results),
     getById: (id) => apiService.get(`${urls.movie}/${id}?api_key=${apiKey}`).then(value => value.data),
-    getByGenreId: (id, page) => apiService.get(`${urls.movies}?api_key=${apiKey}&page=${page}&with_genres=%${id}`).then(value => value.data.results)
+    getByGenreId: (id, page) => apiService.get(`${urls.movies}?api_key=${apiKey}&page=${page}&with_genres=${id}`).then(value => value.data.results)
 }
 
 

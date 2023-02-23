@@ -9,13 +9,10 @@
     height: 75vh;
 
 
-
 }
 
 .Fond {
-
     color: rgb(242, 242, 242);
-
     padding: 10px 0 5px 10px;
     font-size: larger;
 
@@ -26,4 +23,40 @@
     font-style: italic;
     font-weight: bold;
 
+}
+
+.GenreBadgeContainer {
+    position: relative;
+}
+
+.GenreBadge {
+
+    background-color: rgb(104, 104, 104);
+    width: max-content;
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+
+    cursor: pointer;
+    color: floralwhite;
+}
+
+.GenreBadgeWrap a {
+    text-decoration: none;
+    bottom: 5px;
+
+
+}
+
+.GenreBadgeNotification {
+    font-size: small;
+    border-radius: 5px;
+    padding: 2px;
+    border: 1px solid grey;
+    background-color: #bd071d;
+    text-decoration: none;
+    color: floralwhite;
+    position: relative;
+    top: 15px;
+    left: 60px;
 }

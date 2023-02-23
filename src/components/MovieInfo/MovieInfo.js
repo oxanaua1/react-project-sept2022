@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {urlMovieImg} from "../../services";
-import {Link, useParams} from "react-router-dom";
+import {Link, Navigate, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {moviesActions} from "../../redux";
 import css from './MovieInfo.module.css'
@@ -10,11 +10,13 @@ const MovieInfo = () => {
     const {movie} = useSelector(state => state.movies);
     const dispatch = useDispatch();
 
+
     useEffect(() => {
 
         dispatch(moviesActions.getById(id))
 
     }, [dispatch, id])
+
 
     return (
         <div>
@@ -36,15 +38,26 @@ const MovieInfo = () => {
                         <div>Vote Average: {movie.vote_average}; All votes:{movie.vote_count}</div>
                         <div>Runtime:{movie.runtime}</div>
 
-                        <div>
+                        <div className={css.GenreBadgeWrap}>
                             Genre: {movie.genres.map(genre =>
-                            <Link to={genre.id.toString()} key={genre.id}> {genre.name}
+                            <Link to={genre.id.toString()} key={genre.id}>
+                                <div className={css.GenreBadgeContainer}>
+                                    <span className={css.GenreBadgeNotification}>go to</span>
+
+                                    <div className={css.GenreBadge}>
+                                        {genre.name}
+                                </div>
+
+
+
+                                </div>
                             </Link>)}
+
                         </div>
 
                         <div>
                             Production Companies: {movie.production_companies.map(productionCompany =>
-                            <li key={productionCompany.id}>{productionCompany.origin_country}/{productionCompany.name}</li>)}
+                            <li key={productionCompany.id}>{productionCompany.origin_country}{productionCompany.name}</li>)}
                         </div>
                         <div className={css.Overview}>Overview: {movie.overview}</div>
 
