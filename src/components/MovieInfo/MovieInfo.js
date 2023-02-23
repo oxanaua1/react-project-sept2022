@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {urlMovieImg} from "../../services";
-import {Link, Navigate, useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {moviesActions} from "../../redux";
 import css from './MovieInfo.module.css'

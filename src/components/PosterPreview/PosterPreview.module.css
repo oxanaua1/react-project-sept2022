@@ -1,0 +1,14 @@
+.PosterPreviewWrap {
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.PosterPreviewTrendingH3 {
+    background-color: rgb(179, 201, 227);
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: #f2f2f2;
+
+}

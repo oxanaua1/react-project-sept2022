@@ -12,4 +12,3 @@ export {
 }
 
 //genres: '/genre/movie/list'
-// getById: (id) => apiService.get(`${urls.movies}?api_key=${apiKey}&with_genres=%${id}`).then(value => value.data.results)

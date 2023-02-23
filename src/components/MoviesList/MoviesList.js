@@ -40,6 +40,8 @@ const MoviesList = () => {
 
             </div>
 
+
+
         </div>
     );
 };

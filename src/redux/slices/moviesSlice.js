@@ -5,9 +5,11 @@ const initialState = {
     movies: [],
     movie: null,
     moviesByGenre: [],
+    moviesTrending: [],
     page: null,
     errors: null,
-    loading: null
+    loading: null,
+    rating: null
 
 }
 
@@ -47,6 +49,20 @@ const getMoviesByGenre = createAsyncThunk(
         }
     }
 )
+
+const getMoviesTrending = createAsyncThunk(
+    'moviesSlice/getMoviesTrending',
+    async (_, thunkAPI) => {
+        try {
+            return await moviesService.getTrending()
+
+        } catch (e) {
+            return thunkAPI.rejectWithValue(e.response.data)
+        }
+    }
+)
+
+
 const moviesSlice = createSlice({
     name: 'moviesSlice',
     initialState,
@@ -68,6 +84,10 @@ const moviesSlice = createSlice({
                 state.moviesByGenre = action.payload;
                 state.loading = false;
             })
+            .addCase(getMoviesTrending.fulfilled, (state, action) => {
+                state.moviesTrending = action.payload;
+                state.loading = false;
+            })
 
 });
 
@@ -77,7 +97,9 @@ const moviesActions = {
     getAll,
     setCurrentPage,
     getById,
-    getMoviesByGenre
+    getMoviesByGenre,
+    getMoviesTrending,
+
 }
 
 
