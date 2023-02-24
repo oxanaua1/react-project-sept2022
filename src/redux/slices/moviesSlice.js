@@ -6,7 +6,7 @@ const initialState = {
     movie: null,
     moviesByGenre: [],
     moviesTrending: [],
-    page: null,
+    page: 1,
     errors: null,
     loading: null,
     rating: null
@@ -52,9 +52,9 @@ const getMoviesByGenre = createAsyncThunk(
 
 const getMoviesTrending = createAsyncThunk(
     'moviesSlice/getMoviesTrending',
-    async (_, thunkAPI) => {
+    async (page, thunkAPI) => {
         try {
-            return await moviesService.getTrending()
+            return await moviesService.getTrending(page)
 
         } catch (e) {
             return thunkAPI.rejectWithValue(e.response.data)

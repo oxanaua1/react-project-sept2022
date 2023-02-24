@@ -16,7 +16,7 @@ const StarsRating = () => {
                 index += 1;
 
                 return (
-                       <span  key={index} className={css.Star}>&#9733;</span>
+                       <span  key={index} className={css.Star} >&#9733;</span>
 
 
 

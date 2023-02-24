@@ -30,7 +30,7 @@ const MoviesByGenresList = () => {
 
     return (
 
-        <div>
+        <div className={css.MoviesByGenreListBTNContainer}>
             <div className={css.MoviesByGenreListBTN}>
                 <button disabled={page === 1} onClick={() => {
                     dispatch(moviesActions.setCurrentPage(page - 1))
