@@ -22,20 +22,7 @@ const PosterPreview = () => {
 
     return (
         <div>
-            <div className={css.Page}>
-                <button disabled={page === 1} onClick={() => {
-                    dispatch(moviesActions.setCurrentPage(page - 1))
-                }}
-                >prevPage
-                </button>
-                <button onClick={() => {
-                    dispatch(moviesActions.setCurrentPage(page + 1))
-                }}
-                >nextPage
-                </button>
-            </div>
-
-            <div className={css.PosterPreviewTrendingH3}><h3>Trending this week</h3></div>
+                      <div className={css.PosterPreviewTrendingH3}><h3>Trending this week</h3></div>
             <div className={css.PosterPreviewWrap}>
 
                 {moviesTrending.map(movieTrending => <div key={movieTrending.id}>
@@ -52,6 +39,20 @@ const PosterPreview = () => {
 
                 </div>)}
 
+
+
+            </div>
+            <div className={css.Page}>
+                <button disabled={page === 1} onClick={() => {
+                    dispatch(moviesActions.setCurrentPage(page - 1))
+                }}
+                >prevPage
+                </button>
+                <button onClick={() => {
+                    dispatch(moviesActions.setCurrentPage(page + 1))
+                }}
+                >nextPage
+                </button>
             </div>
 
 

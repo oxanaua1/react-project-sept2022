@@ -4,7 +4,8 @@ const urls = {
     movies: '/discover/movie',
     movie: '/movie',
     genres: '/genre/movie/list',
-    trending:'/trending/movie/week'
+    trending:'/trending/movie/week',
+    search:'/search/movie'
 }
 
 export {
