@@ -13,9 +13,12 @@ import {
 } from "./components";
 
 
+
 const App = () => {
+
     return (
         <div>
+
             <Routes>
 
                 <Route path={'/'} element={<MoviesPage/>}>

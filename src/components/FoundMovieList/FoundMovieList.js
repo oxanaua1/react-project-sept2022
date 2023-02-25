@@ -32,7 +32,7 @@ const FoundMovieList = () => {
 
                 {moviesSearched.map(movie =>
                     <div key={movie.id}>
-                        <div>
+                        <div className={css.FoundMovieListCard} >
                             <h3 className={css.Title}>{movie.title}</h3>
                             <div className={css.Title}>Release Date: {movie.release_date}</div>
                             <img src={urlMovieImg + movie.poster_path} alt={movie.title}/>

@@ -1,0 +1,26 @@
+.ToChangeThemeBtn{
+display: flex;
+
+}
+.ToChangeThemeBtn button {
+
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #ec161d;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    margin: 0 30px 0 0;
+    outline: none;
+    padding:0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    touch-action: manipulation;
+
+}

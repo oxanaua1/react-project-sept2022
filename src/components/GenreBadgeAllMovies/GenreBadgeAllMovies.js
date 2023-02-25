@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useParams} from "react-router-dom";
 
 import {genresActions} from "../../redux/slices/genresSlice";
-import css from "../MoviesByGenresList/MoviesByGenreList.module.css";
+import css from './GenreBadgeAllMovies.module.css'
 import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 
 
@@ -21,8 +21,8 @@ const GenreBadgeAllMovies = () => {
         <div>
 
             <div>
-                <div className={css.MoviesByGenreListBTNContainer}>
-                    <div className={css.MoviesByGenreListBTN}>
+                <div className={css.GenreBadgeAllMoviestBTNContainer}>
+                    <div className={css.GenreBadgeAllMoviesBTN}>
                         <button disabled={page === 1} onClick={() => {
                             dispatch(genresActions.setCurrentPage(page - 1))
                         }}>prev
@@ -33,7 +33,7 @@ const GenreBadgeAllMovies = () => {
                         </button>
                     </div>
 
-                    <div className={css.MoviesByGenreListWrap}>{moviesAllByGenre.map(movieAllByGenre => <MoviesListCard
+                    <div className={css.GenreBadgeAllMoviesWrap}>{moviesAllByGenre.map(movieAllByGenre => <MoviesListCard
                         key={movieAllByGenre.id} movie={movieAllByGenre}/>)}</div>
                 </div>
 

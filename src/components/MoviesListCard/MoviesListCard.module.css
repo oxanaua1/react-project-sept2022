@@ -1,7 +1,10 @@
 .MovieCardWrapper {
+    border-radius: 5px;
+    min-height: 550px;
     width: 300px;
     background-color: #132673;
     align-items: center;
+    margin-bottom: 10px;
 
 }
 
