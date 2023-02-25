@@ -1,9 +1,10 @@
 import React, {useEffect} from 'react';
-import {urlMovieImg} from "../../services";
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
+
 import {moviesActions} from "../../redux";
 import css from './MovieInfo.module.css'
+import {urlMovieImg} from "../../services";
 
 
 const MovieInfo = () => {
@@ -26,6 +27,7 @@ const MovieInfo = () => {
             <div className={css.MovieInfoBtnBack}>
                 <button onClick={() => navigate(-1)}>Go Back</button>
             </div>
+
             {movie &&
 
                 <div className={css.MovieInfoWrapper}

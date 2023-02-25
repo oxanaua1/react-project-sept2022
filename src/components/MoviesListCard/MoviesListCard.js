@@ -1,7 +1,9 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+
 import css from './MoviesListCard.module.css'
 import {urlMovieImg} from "../../services";
-import {Link} from "react-router-dom";
+
 
 const MoviesListCard = ({movie}) => {
 

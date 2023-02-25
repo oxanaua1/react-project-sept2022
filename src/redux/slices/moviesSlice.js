@@ -1,4 +1,5 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+
 import {moviesService} from "../../services";
 
 const initialState = {
@@ -66,7 +67,7 @@ const getMoviesSearched = createAsyncThunk(
     'moviesSlice/getMoviesSearched',
     async ({query, page}, thunkAPI) => {
         try {
-            return await moviesService.getSearch(query,page)
+            return await moviesService.getSearch(query, page)
 
         } catch (e) {
             return thunkAPI.rejectWithValue(e.response.data)
@@ -110,11 +111,11 @@ const {reducer: moviesReducer, actions: {setCurrentPage}} = moviesSlice;
 
 const moviesActions = {
     getAll,
-    setCurrentPage,
     getById,
     getMoviesByGenre,
     getMoviesTrending,
-    getMoviesSearched
+    getMoviesSearched,
+    setCurrentPage,
 
 }
 

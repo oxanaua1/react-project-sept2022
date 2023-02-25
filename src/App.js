@@ -12,6 +12,7 @@ import {
     PosterPreview
 } from "./components";
 
+
 const App = () => {
     return (
         <div>

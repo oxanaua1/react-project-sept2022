@@ -1,8 +1,10 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
+import {Link, Outlet} from "react-router-dom";
+
 import {genresActions} from "../../redux/slices/genresSlice";
 import css from './GenreBadge.module.css'
-import {Link, Outlet} from "react-router-dom";
+
 
 const GenreBadge = () => {
     const {genres} = useSelector(state => state.genres);
@@ -12,9 +14,6 @@ const GenreBadge = () => {
         dispatch(genresActions.getAll())
 
     }, [dispatch])
-
-
-    console.log(genres);
 
 
     return (
@@ -27,8 +26,8 @@ const GenreBadge = () => {
                     <Link to={`${genre.id}/moviesAllByGenres`}
                           key={genre.id}>{genre.name}
                     </Link>)}</div>
-            </div>
 
+            </div>
 
             <Outlet/>
 
