@@ -7,7 +7,9 @@ import css from './MoviesByGenreList.module.css'
 
 const MoviesByGenresList = () => {
     const {moviesByGenre, page} = useSelector(state => state.movies);
-    const {id, genreId} = useParams()
+    const {id} = useParams();
+    const {genreId} = useParams();
+
 
     console.log('id', id);
     console.log('genreId', genreId);
@@ -18,14 +20,14 @@ const MoviesByGenresList = () => {
     useEffect(() => {
 
         dispatch(moviesActions.getMoviesByGenre({id, page}))
-        dispatch(moviesActions.getMoviesByGenre({genreId, page}))
+
+        dispatch(moviesActions.getMoviesByGenre({id: genreId, page}))
 
 
-    }, [dispatch, id, genreId, page])
+    }, [dispatch, page])
 
 
     console.log(moviesByGenre);
-
 
 
     return (

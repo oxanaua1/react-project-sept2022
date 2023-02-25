@@ -1,0 +1,50 @@
+.FoundMovieListWrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 10px;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2% );
+}
+
+.Title {
+    color: aliceblue;
+    padding: 0 0 5px 10px;
+}
+
+.Vote {
+    color: aliceblue;
+    padding-left: 20px;
+}
+
+.FoundMovieListWrap button {
+    background-color: gray;
+    height: 30px;
+    border-radius: 5px;
+
+}
+
+.Page{
+    display: flex;
+    justify-content: flex-end;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2% );
+}
+.Page button {
+    border: 1px solid azure;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: aliceblue;
+    color: cyan;
+    font-weight: bold;
+    border-radius: 10px;
+    background-image: linear-gradient(144deg, #18467b, #5B42F3 50%, #6a65e2);
+
+}
+.Page h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #ec9216;
+}

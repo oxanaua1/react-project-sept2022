@@ -11,6 +11,52 @@
 
 }
 
+.MovieInfoBtnBack {
+    background-image: linear-gradient(144deg, #18467b, #5B42F3 50%, #246abc);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+
+.MovieInfoBtnBack button {
+
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    margin: 0;
+  margin-right:30px;
+
+    outline: none;
+    padding: 1rem 1rem;
+
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.MovieInfoBtnBack button:hover {
+    background-color: #FFC229;
+    box-shadow: #FF6314 0 -6px 8px inset;
+    transform: scale(1.05);
+}
+
+.MovieInfoBtnBack button:active {
+    transform: scale(1.025);
+}
+
 .Fond {
     color: rgb(242, 242, 242);
     padding: 10px 0 5px 10px;

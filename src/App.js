@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, Routes} from "react-router-dom";
 
 import {MoviesPage} from "./containers";
-import {GenreBadge, MovieInfo, MoviesByGenresList, MoviesList, PosterPreview} from "./components";
+import {FoundMovieList, GenreBadge, MovieInfo, MoviesByGenresList, MoviesList, PosterPreview} from "./components";
 
 const App = () => {
     return (
@@ -16,9 +16,10 @@ const App = () => {
                     <Route path={'movies/:id/:genreId'} element={<MoviesByGenresList/>}/>
                     <Route path={'genres'} element={<GenreBadge/>}/>
                     <Route path={'genres/:id'} element={<MoviesByGenresList/>}/>
-
-
+                    <Route path={'search'} element={<FoundMovieList/>}/>
                 </Route>
+
+
             </Routes>
         </div>
     );

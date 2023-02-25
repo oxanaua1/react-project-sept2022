@@ -1,14 +1,16 @@
 import React, {useEffect} from 'react';
 import {urlMovieImg} from "../../services";
-import {Link, useParams} from "react-router-dom";
+import {Link, Navigate, useNavigate, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {moviesActions} from "../../redux";
 import css from './MovieInfo.module.css'
+
 
 const MovieInfo = () => {
     const {id} = useParams();
     const {movie} = useSelector(state => state.movies);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -21,11 +23,14 @@ const MovieInfo = () => {
     return (
         <div>
 
-
+            <div className={css.MovieInfoBtnBack}>
+                <button onClick={() => navigate(-1)}>Go Back</button>
+            </div>
             {movie &&
 
                 <div className={css.MovieInfoWrapper}
                      style={{backgroundImage: `url(${urlMovieImg + movie.backdrop_path})`}}>
+
 
                     <div>
                         <img src={urlMovieImg + movie.poster_path} alt={movie.title}/>
@@ -46,8 +51,9 @@ const MovieInfo = () => {
 
                                     <div className={css.GenreBadge}>
                                         {genre.name}
-                                </div>
 
+
+                                    </div>
 
 
                                 </div>

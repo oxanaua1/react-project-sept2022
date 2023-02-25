@@ -5,14 +5,20 @@ import {NavLink} from "react-router-dom";
 import {UserInfo} from "../UserInfo/UserInfo";
 import {FindMovie} from "../FindMovie/FindMovie";
 
+
 const Header = () => {
     return (
-        <div className={css.Header}>
-            <NavLink to={'/'}>HOME</NavLink>
-            <NavLink to={'/movies'}>MOVIES</NavLink>
-            <NavLink to={'/genres'}>GENRES</NavLink>
-            <FindMovie/>
-            <UserInfo/>
+        <div>
+            <div className={css.Header}>
+                <NavLink to={'/'}>HOME</NavLink>
+                <NavLink to={'/movies'}>MOVIES</NavLink>
+                <NavLink to={'/genres'}>GENRES</NavLink>
+                <NavLink to={'/search'}> <FindMovie/></NavLink>
+                <UserInfo/>
+            </div>
+
+
+
         </div>
     );
 };

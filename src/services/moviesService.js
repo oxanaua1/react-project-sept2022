@@ -6,7 +6,7 @@ const moviesService = {
     getById: (id) => apiService.get(`${urls.movie}/${id}?api_key=${apiKey}`).then(value => value.data),
     getByGenreId: (id, page) => apiService.get(`${urls.movies}?api_key=${apiKey}&page=${page}&with_genres=${id}`).then(value => value.data.results),
     getTrending: (page) => apiService.get(`${urls.trending}?api_key=${apiKey}&page=${page}`).then(value => value.data.results),
-    getSearch: (data, page) => apiService.get(`${urls.search}?api_key=${apiKey}&language=en-US&query=${data}&page=${page}`).then(value => value.data.results)
+    getSearch: (query, page) => apiService.get(`${urls.search}?api_key=${apiKey}&language=en-US&query=${query}&page=${page}`).then(value => value.data.results)
 }
 
 

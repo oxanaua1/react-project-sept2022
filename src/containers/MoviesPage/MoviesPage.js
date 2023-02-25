@@ -8,6 +8,7 @@ const MoviesPage = () => {
         <div>
             <Header/>
             <Outlet/>
+
         </div>
     );
 };
