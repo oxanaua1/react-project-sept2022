@@ -4,7 +4,8 @@ import {genresService} from "../../services";
 const initialState = {
     genres: [],
     genre: null,
-    page: null,
+    moviesAllByGenre: [],
+    page: 1,
     errors: null,
     loading: null
 
@@ -14,7 +15,7 @@ const getAll = createAsyncThunk(
     'genresSlice/getAll',
     async (_, thunkAPI) => {
         try {
-             return await genresService.getAll()
+            return await genresService.getAll()
 
         } catch (e) {
             return thunkAPI.rejectWithValue(e.response.data)
@@ -22,40 +23,45 @@ const getAll = createAsyncThunk(
     }
 );
 
-// const getById = createAsyncThunk(
-//     'genresSlice/getById',
-//     async (id, thunkAPI) => {
-//         try {
-//           return await genresService.getById(id);
-//
-//
-//         } catch (e) {
-//             return thunkAPI.rejectWithValue(e.response.data)
-//         }
-//     }
-// )
+const getAllMoviesByGenreId = createAsyncThunk(
+    'genresSlice/getAllMoviesByGenreId',
+    async ({id, page}, thunkAPI) => {
+        try {
+            return await genresService.getMoviesByGenreId(id, page)
+
+        } catch (e) {
+            return thunkAPI.rejectWithValue(e.response.data)
+        }
+    }
+)
 
 const genresSlice = createSlice({
     name: 'genresSlice',
     initialState,
-    reducers: {},
+    reducers: {
+        setCurrentPage: (state, action) => {
+            state.page = action.payload;
+        }
+    },
     extraReducers: builder =>
         builder
             .addCase(getAll.fulfilled, (state, action) => {
                 state.genres = action.payload;
                 state.loading = false;
             })
-            // .addCase(getById.fulfilled, (state, action) => {
-            //     state.genre = action.payload;
-            // })
+            .addCase(getAllMoviesByGenreId.fulfilled, (state, action) => {
+                state.moviesAllByGenre = action.payload;
+                state.loading = false;
+            })
 
 });
 
-const {reducer: genresReducer} = genresSlice;
+const {reducer: genresReducer, actions: {setCurrentPage}} = genresSlice;
 
 const genresActions = {
     getAll,
-    // getById
+    getAllMoviesByGenreId,
+    setCurrentPage
 }
 
 

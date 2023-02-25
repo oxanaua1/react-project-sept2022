@@ -7,6 +7,7 @@ import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 import css from './MoviesList.module.css'
 
 
+
 const MoviesList = () => {
 
     const {movies, page} = useSelector(state => state.movies);
@@ -39,7 +40,6 @@ const MoviesList = () => {
                 {movies.map(movie => <MoviesListCard key={movie.id} movie={movie}/>)}
 
             </div>
-
 
 
         </div>

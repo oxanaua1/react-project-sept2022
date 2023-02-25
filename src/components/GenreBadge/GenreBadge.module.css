@@ -1,16 +1,18 @@
-.GenreContainer{
-    height: 85vh;
-    background-color: #00DBDE;
-    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
 
+.GenreContainer {
+
+    padding-bottom: 30px;
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #f193e6 100%);
 }
+
 .GenreWrap {
     padding-top: 30px;
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap:40px;
     background-color: #00DBDE;
-    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    background-image: linear-gradient(90deg, #00DBDE 0%, #f193e6 100%);
 
 }
 

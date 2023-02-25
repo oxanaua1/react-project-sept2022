@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {urlMovieImg} from "../../services";
-import {Link, Navigate, useNavigate, useParams} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {moviesActions} from "../../redux";
 import css from './MovieInfo.module.css'
@@ -45,7 +45,8 @@ const MovieInfo = () => {
 
                         <div className={css.GenreBadgeWrap}>
                             Genre: {movie.genres.map(genre =>
-                            <Link to={genre.id.toString()} key={genre.id}>
+
+                            <Link to={`${genre.id}/moviesByGenres`} key={genre.id}>
                                 <div className={css.GenreBadgeContainer}>
                                     <span className={css.GenreBadgeNotification}>go to</span>
 
@@ -71,7 +72,6 @@ const MovieInfo = () => {
 
                 </div>
             }
-
 
         </div>
     );

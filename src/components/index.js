@@ -8,4 +8,6 @@ export * from './StarsRating/StarsRating';
 export * from './UserInfo/UserInfo';
 export * from './FindMovie/FindMovie';
 export * from './MoviesByGenresList/MoviesByGenresList';
-export * from './FoundMovieList/FoundMovieList'
+export * from './FoundMovieList/FoundMovieList';
+export * from './NotFoundPage/NotFoundPage';
+export * from './GenreBadgeAllMovies/GenreBadgeAllMovies'

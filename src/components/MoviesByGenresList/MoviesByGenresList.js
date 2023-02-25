@@ -5,13 +5,10 @@ import {useParams} from "react-router-dom";
 import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 import css from './MoviesByGenreList.module.css'
 
+
 const MoviesByGenresList = () => {
     const {moviesByGenre, page} = useSelector(state => state.movies);
-    const {id} = useParams();
     const {genreId} = useParams();
-
-
-    console.log('id', id);
     console.log('genreId', genreId);
 
     const dispatch = useDispatch();
@@ -19,12 +16,10 @@ const MoviesByGenresList = () => {
 
     useEffect(() => {
 
-        dispatch(moviesActions.getMoviesByGenre({id, page}))
-
-        dispatch(moviesActions.getMoviesByGenre({id: genreId, page}))
+       dispatch(moviesActions.getMoviesByGenre({genreId, page}))
 
 
-    }, [dispatch, page])
+    }, [dispatch, genreId, page])
 
 
     console.log(moviesByGenre);
@@ -32,20 +27,25 @@ const MoviesByGenresList = () => {
 
     return (
 
-        <div className={css.MoviesByGenreListBTNContainer}>
-            <div className={css.MoviesByGenreListBTN}>
-                <button disabled={page === 1} onClick={() => {
-                    dispatch(moviesActions.setCurrentPage(page - 1))
-                }}>prev
-                </button>
-                <button disabled={page === 500} onClick={() => {
-                    dispatch(moviesActions.setCurrentPage(page + 1))
-                }}>next
-                </button>
+        <div>
+            <div className={css.MoviesByGenreListBTNContainer}>
+                <div className={css.MoviesByGenreListBTN}>
+                    <button disabled={page === 1} onClick={() => {
+                        dispatch(moviesActions.setCurrentPage(page - 1))
+                    }}>prev
+                    </button>
+                    <button disabled={page === 500} onClick={() => {
+                        dispatch(moviesActions.setCurrentPage(page + 1))
+                    }}>next
+                    </button>
+                </div>
+
+                <div className={css.MoviesByGenreListWrap}>{moviesByGenre.map(movieByGenre => <MoviesListCard
+                    key={movieByGenre.id} movie={movieByGenre}/>)}</div>
             </div>
 
-            <div className={css.MoviesByGenreListWrap}>{moviesByGenre.map(movieByGenre => <MoviesListCard
-                key={movieByGenre.id} movie={movieByGenre}/>)}</div>
+
+
         </div>
 
 
