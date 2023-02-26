@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter} from "react-router-dom";
-import {setUpStore} from "./redux";
+
 import {Provider} from "react-redux";
 
 import './index.css';
 import {App} from './App';
-
+import {setUpStore} from "./redux";
 
 const store = setUpStore();
 

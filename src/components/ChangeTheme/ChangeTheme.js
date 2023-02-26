@@ -18,11 +18,11 @@ const ChangeTheme = () => {
     return (
         <div>
 
-            <div className={css.ToChangeThemeBtn}>
+            <div className={css.ToChangeThemeBtn}
+                 onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+                {theme === "dark" ? <button id={css.BtnLight}> light ☼</button> :
+                    <button id={css.BtnDark}>dark ☾ </button>}
 
-                <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-                    {theme === "dark" ? <button> to light mode</button> : <button>to dark mode </button>}
-                </button>
 
             </div>
 

@@ -9,12 +9,12 @@ body {
 
 
 :root[color-scheme="dark"] {
+    --bg-color: pink;
 
     color-scheme: dark;
 }
 
 :root[color-scheme="light"] {
 
-    color-scheme: light;
+    color-scheme: ligtt;
 }
-
