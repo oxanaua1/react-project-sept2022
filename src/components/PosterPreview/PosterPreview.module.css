@@ -1,35 +1,54 @@
+.PosterPreviewWrapBg {
+    background-color: var(--bg-color-main);
+}
+
 .PosterPreviewWrap {
-    /*background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);*/
     display: flex;
     flex-wrap: wrap;
+    gap: 5px;
+
+}
+
+.PosterPreviewTrendingCard {
+    border-radius: 5px;
+    min-height: 520px;
+    width: 300px;
+    background-color: var(--bg-color-card);
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .PosterPreviewTrendingH3 {
-    /*background-color: rgb(179, 201, 227);*/
     display: flex;
     align-items: center;
     font-size: 30px;
-    color: #246abc;
+    color: var(--font-color-main);
 
+
+}
+
+.PosterPreviewTrendingVote {
+    font-weight: bold;
+    color: var(--font-color-main);
+    padding: 0 0 5px 10px;
 }
 
 .Page {
     display: flex;
     align-items: center;
     justify-content: end;
-    /*background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);*/
     height: 70px;
+
 }
 
 .Page button {
-    border: 1px solid azure;
+
     padding: 10px;
     margin: 10px;
     cursor: pointer;
-    background-color: aliceblue;
-    color: cyan;
+    border: none;
     font-weight: bold;
     border-radius: 10px;
-    background-image: linear-gradient(144deg, #18467b, #5B42F3 50%, #6a65e2);
+    background-image: var(--bg-color-btn);
 
 }

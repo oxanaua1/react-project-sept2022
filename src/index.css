@@ -9,12 +9,28 @@ body {
 
 
 :root[color-scheme="dark"] {
-    --bg-color: pink;
-
     color-scheme: dark;
+    --bg-color-main: #112c3f;
+    --bg-color-card: #132673;
+    --font-color-main: #ec9216;
+    --font-color-cardInfo: #ec9216;
+    --bg-color-btn: linear-gradient(144deg, #18467b, #5B42F3 50%, #6a65e2);
+    --bg-color-menu: linear-gradient(144deg, #043d71, #246abc 50%, #18467b);
+    --font-color-menu: #ffffff;
+    --font-color-menu-active: #ec9216;
+
 }
 
 :root[color-scheme="light"] {
-
     color-scheme: ligtt;
+
+    --bg-color-main: rgba(245, 223, 228, 0.72);
+    --bg-color-card: #ced8e1;
+    --font-color-main: #0c04cb;
+    --font-color-cardInfo: #ffffff;
+    --bg-color-btn: linear-gradient(144deg, #18467b, #f193e6 50%, #6a65e2);
+    --bg-color-menu: linear-gradient(144deg, #043d71, #f193e6 50%, #18467b);
+    --font-color-menu: #ffffff;
+    --font-color-menu-active: #f193e6;
+
 }

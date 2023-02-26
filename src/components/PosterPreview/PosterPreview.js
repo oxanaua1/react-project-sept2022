@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {moviesActions} from "../../redux";
 
@@ -21,24 +21,22 @@ const PosterPreview = () => {
 
 
     return (
-        <div>
-                      <div className={css.PosterPreviewTrendingH3}><h3>Trending this week</h3></div>
+        <div className={css.PosterPreviewWrapBg}>
+            <div className={css.PosterPreviewTrendingH3}><h3>Trending this week</h3></div>
             <div className={css.PosterPreviewWrap}>
 
                 {moviesTrending.map(movieTrending => <div key={movieTrending.id}>
 
-                    <div>
+                    <div className={css.PosterPreviewTrendingCard}>
 
                         <Link to={`${movieTrending.id}`}>
                             <img src={urlMovieImg + movieTrending.poster_path} alt={movieTrending.title}/>
                         </Link>
-                            <span><StarsRating/> {movieTrending.vote_average}</span>
-
+                        <div className={css.PosterPreviewTrendingVote}><StarsRating/>Vote
+                            avg: {movieTrending.vote_average}</div>
 
                     </div>
-
                 </div>)}
-
 
 
             </div>

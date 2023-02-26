@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 
 import css from './MoviesListCard.module.css'
 import {urlMovieImg} from "../../services";
+import {StarsRating} from "../StarsRating/StarsRating";
 
 
 const MoviesListCard = ({movie}) => {
@@ -20,6 +21,7 @@ const MoviesListCard = ({movie}) => {
                     <img src={urlMovieImg + poster_path} alt={title}/>
                     <div className={css.Vote}>Vote Average: {vote_average}; All voted: {vote_count}</div>
                 </Link>
+                <div className={css.MovieCardStars}><StarsRating/></div>
 
             </div>
         </div>

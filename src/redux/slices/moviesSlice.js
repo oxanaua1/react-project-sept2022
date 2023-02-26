@@ -10,8 +10,7 @@ const initialState = {
     moviesSearched: [],
     page: 1,
     errors: null,
-    loading: null,
-    rating: null,
+    loading: null
 
 
 }
@@ -115,7 +114,7 @@ const moviesActions = {
     getMoviesByGenre,
     getMoviesTrending,
     getMoviesSearched,
-    setCurrentPage,
+    setCurrentPage
 
 }
 
