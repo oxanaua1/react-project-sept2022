@@ -8,7 +8,7 @@
     box-shadow: #ADCFFF 0 16px 16px inset;
 }
 
-#BtnLight {
+.BtnLight {
     position: absolute;
     right: 0;
     width: 48px;
@@ -24,7 +24,7 @@
     z-index: 1;
 }
 
-#BtnDark {
+.BtnDark {
     position: absolute;
     left: 0;
     width: 50px;
@@ -41,13 +41,13 @@
 
 }
 
-#BtnLight.active {
+.BtnLight.active {
     color: #0c0c0c;
     cursor: pointer;
     transition: all 0.5s ease;
 }
 
-#BtnBlack.active {
+.BtnBlack.active {
     color: #ffffff;
     cursor: pointer;
     transition: all 0.5s ease;

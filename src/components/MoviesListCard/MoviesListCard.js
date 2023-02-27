@@ -1,9 +1,9 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-import css from './MoviesListCard.module.css'
 import {urlMovieImg} from "../../services";
 import {StarsRating} from "../StarsRating/StarsRating";
+import css from './MoviesListCard.module.css';
 
 
 const MoviesListCard = ({movie}) => {

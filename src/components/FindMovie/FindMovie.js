@@ -11,8 +11,8 @@ const FindMovie = () => {
 
     const {register, handleSubmit, reset, getValues} = useForm({mode: 'all'});
     const [query, setQuery] = useSearchParams();
-    const dispatch = useDispatch();
     const {page} = useSelector(state => state.movies);
+    const dispatch = useDispatch();
 
     const find = () => {
         const data = getValues('findMovie')

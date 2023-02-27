@@ -1,36 +1,38 @@
 .MovieCardWrapper {
+
     border-radius: 5px;
-    min-height: 550px;
+    min-height: 650px;
     width: 300px;
-    background-color: #132673;
+    background-color: var(--bg-color-card);
     align-items: center;
     margin-bottom: 10px;
 
+
+}
+
+.MovieCardWrapper img {
+    height: 450px;
 }
 
 .Title {
-    color: aliceblue;
+    color: var(--font-color-main);
     padding: 0 0 5px 10px;
+    font-weight: bold;
 }
 
 .Vote {
-    color: aliceblue;
+    color: var(--font-color-main);
     padding-left: 20px;
+    font-weight: bold;
 }
 
-.MovieCardWrapper button {
-    background-color: gray;
-    height: 30px;
-    border-radius: 5px;
-
-
-}
 
 .MovieCardWrapper a {
     text-decoration: none;
     color: darkblue;
     padding: 5px;
 }
-.MovieCardStars{
-   padding-left: 15px;
+
+.MovieCardStars {
+    padding-left: 15px;
 }

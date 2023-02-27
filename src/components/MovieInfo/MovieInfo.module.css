@@ -5,13 +5,13 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-     height: 100vh;
+    height: 100vh;
 
 
 }
 
 .MovieInfoBtnBack {
-    background-image: linear-gradient(144deg, #18467b, #5B42F3 50%, #246abc);
+    background-image: var(--bg-color-main);
     height: 70px;
     display: flex;
     align-items: center;
@@ -22,7 +22,7 @@
 .MovieInfoBtnBack button {
 
     appearance: none;
-    background-color: #FFFFFF;
+    background-color: #eaeaea;
     border-radius: 40em;
     border-style: none;
     box-shadow: #ADCFFF 0 -12px 6px inset;
@@ -54,7 +54,7 @@
 }
 
 .Fond {
-   color: var(--font-color-cardInfo);
+    color: var(--font-color-cardInfo);
     padding: 10px 0 5px 10px;
     font-size: larger;
 

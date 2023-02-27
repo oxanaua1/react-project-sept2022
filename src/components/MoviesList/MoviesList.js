@@ -6,7 +6,6 @@ import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 import css from './MoviesList.module.css'
 
 
-
 const MoviesList = () => {
 
     const {movies, page} = useSelector(state => state.movies);
@@ -15,13 +14,11 @@ const MoviesList = () => {
 
     useEffect(() => {
         dispatch(moviesActions.getAll(page))
-
-
     }, [dispatch, page])
 
 
     return (
-        <div>
+        <div className={css.MovieListWrapperBtn}>
             <div className={css.Page}>
                 <button disabled={page === 1} onClick={() => {
                     dispatch(moviesActions.setCurrentPage(page - 1))

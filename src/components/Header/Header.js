@@ -1,10 +1,10 @@
 import React from 'react';
-
-import css from './Header.module.css'
 import {NavLink} from "react-router-dom";
+
 import {UserInfo} from "../UserInfo/UserInfo";
 import {FindMovie} from "../FindMovie/FindMovie";
 import {ChangeTheme} from "../ChangeTheme/ChangeTheme";
+import css from './Header.module.css'
 
 
 const Header = () => {

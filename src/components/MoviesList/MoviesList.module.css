@@ -1,4 +1,5 @@
 .MovieListWrapper {
+    background-color: var(--bg-color-main);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -7,20 +8,24 @@
 
 }
 
-.Page{
+.MovieListWrapperBtn {
+    background-color: var(--bg-color-main);
+}
+
+.Page {
     display: flex;
     justify-content: flex-end;
 
 }
+
 .Page button {
-    border: 1px solid azure;
+    border: 1px solid snow;
     padding: 10px;
     margin: 10px;
     cursor: pointer;
-    background-color: aliceblue;
-    color: #ec9216;
+    color: var(--font-color-cardInfo);
     font-weight: bold;
     border-radius: 10px;
-    background-image: linear-gradient(144deg, #18467b, #5B42F3 50%, #6a65e2);
+    background-image: var(--bg-color-btn)
 
 }

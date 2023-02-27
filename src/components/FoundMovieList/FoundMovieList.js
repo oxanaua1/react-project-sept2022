@@ -1,14 +1,16 @@
 import React from 'react';
+import {useDispatch, useSelector} from "react-redux";
+
 import {urlMovieImg} from "../../services";
 import css from './FoundMovieList.module.css'
 import {moviesActions} from "../../redux";
-import {useDispatch, useSelector} from "react-redux";
 
 
 const FoundMovieList = () => {
 
     const dispatch = useDispatch();
     const {moviesSearched, page} = useSelector(state => state.movies);
+
 
     return (
         <div>
@@ -32,7 +34,7 @@ const FoundMovieList = () => {
 
                 {moviesSearched.map(movie =>
                     <div key={movie.id}>
-                        <div className={css.FoundMovieListCard} >
+                        <div className={css.FoundMovieListCard}>
                             <h3 className={css.Title}>{movie.title}</h3>
                             <div className={css.Title}>Release Date: {movie.release_date}</div>
                             <img src={urlMovieImg + movie.poster_path} alt={movie.title}/>

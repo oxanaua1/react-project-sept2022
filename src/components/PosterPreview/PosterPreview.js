@@ -1,22 +1,21 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {moviesActions} from "../../redux";
-
-import {urlMovieImg} from "../../services";
-import css from './PosterPreview.module.css'
-import {StarsRating} from "../StarsRating/StarsRating";
 import {Link} from "react-router-dom";
+
+import {moviesActions} from "../../redux";
+import {urlMovieImg} from "../../services";
+import {StarsRating} from "../StarsRating/StarsRating";
+import css from './PosterPreview.module.css';
 
 
 const PosterPreview = () => {
+
     const {moviesTrending, page} = useSelector(state => state.movies);
     const dispatch = useDispatch();
 
 
     useEffect(() => {
         dispatch(moviesActions.getMoviesTrending(page))
-
-
     }, [dispatch, page])
 
 

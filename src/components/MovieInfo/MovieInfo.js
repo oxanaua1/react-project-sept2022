@@ -3,9 +3,8 @@ import {Link, useNavigate, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 
 import {moviesActions} from "../../redux";
-import css from './MovieInfo.module.css'
 import {urlMovieImg} from "../../services";
-
+import css from './MovieInfo.module.css';
 
 const MovieInfo = () => {
     const {id} = useParams();
@@ -15,9 +14,7 @@ const MovieInfo = () => {
 
 
     useEffect(() => {
-
         dispatch(moviesActions.getById(id))
-
     }, [dispatch, id])
 
 

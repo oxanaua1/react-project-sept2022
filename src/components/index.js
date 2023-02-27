@@ -10,4 +10,5 @@ export * from './FindMovie/FindMovie';
 export * from './MoviesByGenresList/MoviesByGenresList';
 export * from './FoundMovieList/FoundMovieList';
 export * from './NotFoundPage/NotFoundPage';
-export * from './GenreBadgeAllMovies/GenreBadgeAllMovies'
+export * from './GenreBadgeAllMovies/GenreBadgeAllMovies';
+export * from './ChangeTheme/ChangeTheme';

@@ -1,19 +1,21 @@
 import React from 'react';
 import {useState} from "react";
-import css from './StarsRating.module.css'
+
+import css from './StarsRating.module.css';
 
 
 const StarsRating = () => {
+
     const [rating, setRating] = useState(0);
     const [hover, setHover] = useState(0);
 
 
     return (
         <div className={css.StarsRating}>PLS VOTE:
-              {[...Array(10)] .map((star, index) => {
+            {[...Array(10)].map((star, index) => {
                 index += 1;
                 return (
-                    <button id={css.button}
+                    <button
                         type="button"
                         key={index}
                         className={index <= ((rating && hover) || hover) ? css.on : css.off}

@@ -1,13 +1,13 @@
 import React, {useEffect} from 'react';
-import {useLocalStorage} from '../../hooks/useLocalStorage';
 
+import {useLocalStorage} from '../../hooks';
 import css from './ChangeTheme.module.css'
 
 
 const ChangeTheme = () => {
 
-    const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const [theme, setTheme] = useLocalStorage('changedTheme', defaultDark ? "dark" : "light")
+    const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const [theme, setTheme] = useLocalStorage('changedTheme', defaultDark ? "dark" : "light");
 
 
     useEffect(() => {
@@ -20,12 +20,10 @@ const ChangeTheme = () => {
 
             <div className={css.ToChangeThemeBtn}
                  onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-                {theme === "dark" ? <button id={css.BtnLight}> light ☼</button> :
-                    <button id={css.BtnDark}>dark ☾ </button>}
-
+                {theme === "dark" ? <button className={css.BtnLight}> light ☼</button> :
+                    <button className={css.BtnDark}>dark ☾ </button>}
 
             </div>
-
 
         </div>
 
